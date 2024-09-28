@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+</head>
+<body>
+<a href="/logout" style= "background-color: orangered; color: black; font-weight: bold; text-decoration: none;margin-left: 95%; border-radius: 2px;">Logout</a>    
+<a href="/profile/upload" style= "background-color: green; color: black; font-weight: bold; text-decoration: none;margin-left: 0%; border-radius: 2px;">change profile pic</a>    
+
+<div  id="profilepic">   
+   <img src="/images/uploads/<%= user.profilepic %>" alt="">
+</div>   
+
+
+<h1 style="margin-left: 70px;" >Hello <%=user.name %> </h1>
+    <h3>Post a Status</h3>
+    <form action="/post" method="post">
+        <textarea style="color: black; font-weight: bold;"  rows="6" cols="50" placeholder="What's on your mind?" name="content" required></textarea>
+        <br>
+        <button style="background-color: blue; font-weight: bold;" type="submit">Post</button>
+    </form>
+    
+    <hr>
+
+    <h2>Your Posts</h2>
+    <div class="posts">
+        <% if (user.posts && user.posts.length > 0) { %>
+            <% user.posts.reverse().forEach(post => { %>
+                <div id="post">
+                    <h4 style="color: blue; padding-top: -30px;">@<%= user.username %></h4>
+                    <p><%= post.content %></p>
+                    <div id="like"> 
+                        <a href="">Like</a> 
+                        <a href="" style="background-color: red;">Edit</a>          
+                    </div>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <p>No posts yet.</p>
+        <% } %>
+    </div>
+
+
+    
+</body>
+</html>

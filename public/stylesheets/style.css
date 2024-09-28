@@ -1,0 +1,48 @@
+body{
+    background-color: seagreen;
+}
+
+
+.form{
+   
+    width: 350px;
+    height: 350px;
+    margin-left: 40%;
+    margin-top: 15%;
+   
+    padding-left: 30px;
+    padding-top: 20px;
+    border: 5px solid black;
+
+}
+
+#logg{
+    width: 290px;
+    height: 240px;
+}
+input{
+    margin-top: 20px;
+    width: 250px;
+    height: 30px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    font-weight: bold;   
+}
+
+button{
+    background-color: brown;
+    color: white;
+}
+img{
+    height: 500px;
+    margin-top: 150px;
+    margin-left: 20%;
+}
+#logout{
+    position: absolute;
+    left: 0%;
+}
+
+#Login{
+  margin-left: 40%;
+}

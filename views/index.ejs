@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>social life</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+    <h1 style="font-weight: bolder; margin-left: 45%; position: absolute; top: 20%;">Create User</h1>
+    <div class="form">
+    <form method="post" action="/register">
+        <input type="text" placeholder="username" name="username" required><br> 
+        <input type="text" placeholder="name" name="name" required><br> 
+        <input type="password" placeholder="password" name="password" required><br>
+        <input type="email" placeholder="email" name="email" required><br>
+        <input type="number" placeholder="age" name="age" required><br>
+        <button type="submit">Create</button>
+      </form>
+    </div>
+    <div id="Login">
+    <h2>Alrready have an account??</h2>
+    <a href="/login"><button>Login</button></a>
+    </div>
+    
+</body>
+</html>
